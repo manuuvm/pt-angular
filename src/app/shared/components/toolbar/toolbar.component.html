@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <div class="container">
+    <button (click)="openDialog()" class="new-user-button"
+      mat-stroked-button>{{ 'TOOLBAR.ADD_NEW_USER_BUTTON' | translate }}
+    </button>
+    <mat-button-toggle-group class="button-container" #group="matButtonToggleGroup" value="en">
+      <mat-button-toggle (click)="changeLanguage('es')" value="es">ES</mat-button-toggle>
+      <mat-button-toggle (click)="changeLanguage('en')" value="en">EN</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</mat-toolbar>

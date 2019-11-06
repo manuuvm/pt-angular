@@ -1,0 +1,27 @@
+.container {
+  padding: 30px;
+}
+
+.container-size {
+  max-width: 400px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-button {
+  margin-right: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.textfield {
+  &:not(:last-of-type) {
+    margin-right: 10px;
+  }
+}

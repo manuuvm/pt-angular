@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>{{ 'NEW_USER_DIALOG.TITLE' | translate}}</h3>
+  <app-spinner>
+    <form [formGroup]="newUserEditionForm" class="form-container">
+      <mat-form-field class="textfield">
+        <input name="nameFilter" placeholder="{{ 'NEW_USER_DIALOG.NAME_PLACEHOLDER' | translate}}"
+          formControlName="name" matInput>
+        <mat-error *ngIf="newUserEditionForm.get('name').hasError('required')">
+          {{ 'NEW_USER_DIALOG.NAME_ERROR_REQUIRED' | translate}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput readonly placeholder="{{ 'NEW_USER_DIALOG.BIRTHDATE_PLACEHOLDER' | translate}}"
+          [matDatepicker]="birthdatePicker" [max]="maxDate" formControlName="birthdate">
+        <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #birthdatePicker></mat-datepicker>
+        <mat-error *ngIf="newUserEditionForm.get('birthdate').hasError('required')">
+          {{ 'NEW_USER_DIALOG.BIRTHDATE_ERROR_REQUIRED' | translate}}
+        </mat-error>
+      </mat-form-field>
+    </form>
+  </app-spinner>
+  <div class="button-container">
+    <button (click)="onCancel()" mat-stroked-button>{{ 'NEW_USER_DIALOG.CANCEL_BUTTON' | translate}}</button>
+    <button (click)="onSave()" mat-stroked-button>{{ 'NEW_USER_DIALOG.SAVE_BUTTON' | translate}}</button>
+  </div>
+</div>

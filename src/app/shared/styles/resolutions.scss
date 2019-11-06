@@ -1,0 +1,6 @@
+@function register-resolution($res) {
+  @return $res + 1;
+}
+
+// https://www.mydevice.io/#compare-devices
+$iphone6-plus-portrait: register-resolution(414px);

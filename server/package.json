@@ -1,0 +1,19 @@
+{
+  "name": "pt-angular",
+  "version": "1.0.0",
+  "description": "PT angular",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

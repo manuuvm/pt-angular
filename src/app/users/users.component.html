@@ -1,0 +1,50 @@
+<div class="container">
+  <h1 class="mat-display-1">{{ 'USERS.TITLE' | translate }}</h1>
+  <form onsubmit="" class="form-container">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter()" [formControl]="filterFormControl"
+        placeholder="{{ 'USERS.FILTER_INPUT_PLACEHOLDER' | translate }}">
+    </mat-form-field>
+    <button (click)="onClickClearButton()" class="clear-button"
+      mat-stroked-button>{{ 'USERS.CLEAR_FILTER_BUTTON' | translate }}</button>
+  </form>
+  <div class="mat-elevation-z8 table">
+    <app-spinner>
+      <mat-table [dataSource]="usersDataSource" matSort matSortStart="desc">
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Id </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'USERS.TABLE_HEADER.NAME' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="birthdate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'USERS.TABLE_HEADER.BIRTHDATE' | translate }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.birthdate | date: 'dd/MM/yyyy'}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+          <mat-header-cell *matHeaderCellDef> {{ 'USERS.TABLE_HEADER.EDIT' | translate }} </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button mat-button (click)="navigateToEditUser(element.id)">
+              <mat-icon>create</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="remove">
+          <mat-header-cell *matHeaderCellDef> {{ 'USERS.TABLE_HEADER.REMOVE' | translate }} </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button mat-button (click)="deleteUser(element.id)">
+              <mat-icon>clear</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+      <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>
+    </app-spinner>
+  </div>
+</div>

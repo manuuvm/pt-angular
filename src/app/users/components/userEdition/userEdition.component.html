@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="mat-display-1"> {{ 'USER_EDITION.TITLE' | translate}}</h1>
+  <div class="container-size">
+    <app-spinner>
+      <form [formGroup]="userEditionForm" class="form-container">
+        <mat-form-field>
+          <input matInput type="number" placeholder="Id" formControlName="id">
+          <mat-error *ngIf="userEditionForm.get('id').hasError('required')">
+            {{ 'USER_EDITION.ID_ERROR_REQUIRED' | translate}}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{ 'USER_EDITION.NAME_PLACEHOLDER' | translate}}" formControlName="name">
+          <mat-error *ngIf="userEditionForm.get('name').hasError('required')">
+            {{ 'USER_EDITION.NAME_ERROR_REQUIRED' | translate}}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="{{ 'USER_EDITION.BIRTHDATE_PLACEHOLDER' | translate}}" readonly
+            [matDatepicker]="birthdatePicker" [max]="maxDate" formControlName="birthdate">
+          <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #birthdatePicker></mat-datepicker>
+          <mat-error *ngIf="userEditionForm.get('birthdate').hasError('required')">
+            {{ 'USER_EDITION.BIRTHDATE_ERROR_REQUIRED' | translate}}
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </app-spinner>
+    <div class="button-container">
+      <button class="cancel-button" routerLink="/users"
+        mat-stroked-button>{{ 'USER_EDITION.BACK_BUTTON' | translate}}</button>
+      <button (click)="updateUserById()" mat-stroked-button>{{ 'USER_EDITION.SAVE_BUTTON' | translate}}</button>
+    </div>
+  </div>
+</div>

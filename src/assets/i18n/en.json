@@ -1,0 +1,46 @@
+{
+  "TOOLBAR": {
+    "ADD_NEW_USER_BUTTON": "New user"
+  },
+  "USERS": {
+    "TITLE": "Users",
+    "FILTER_INPUT_PLACEHOLDER": "Filter",
+    "CLEAR_FILTER_BUTTON": "Clear Filter",
+    "USER_REMOVED_SUCCESSFULLY": "User removed succesfully",
+    "TABLE_HEADER": {
+      "NAME": "Name",
+      "BIRTHDATE": "Birthdate",
+      "EDIT": "Edit",
+      "REMOVE": "Remove"
+    },
+    "TABLE_FOOTER": {
+      "ITEMS_PER_PAGE": "Items per page",
+      "NEXT_PAGE": "Next page",
+      "PREVIOUS_PAGE": "Previous page",
+      "RANGE": "{{startIndex}} - {{endIndex}} of {{length}}",
+      "FIRST_PAGE": "First page",
+      "LAST_PAGE": "Last page"
+    }
+  },
+  "NEW_USER_DIALOG": {
+    "TITLE": "New user",
+    "NAME_PLACEHOLDER": "Name",
+    "NAME_ERROR_REQUIRED": "Name is required",
+    "BIRTHDATE_PLACEHOLDER": "Birthdate",
+    "BIRTHDATE_ERROR_REQUIRED": "Fecha de nacimiento requerida",
+    "CANCEL_BUTTON": "Cancel",
+    "SAVE_BUTTON": "Save",
+    "USER_CREATED_SUCCESSFULLY": "User created successfully"
+  },
+  "USER_EDITION": {
+    "TITLE": "User Edition",
+    "NAME_PLACEHOLDER": "Name",
+    "NAME_ERROR_REQUIRED": "Name is required",
+    "BIRTHDATE_PLACEHOLDER": "Birthdate",
+    "BIRTHDATE_ERROR_REQUIRED": "Birthdate is required",
+    "ID_ERROR_REQUIRED": "Id is required",
+    "BACK_BUTTON": "Back",
+    "SAVE_BUTTON": "Save",
+    "USER_MODIFIED_SUCCESSFULLY": "user modified successfully"
+  }
+}

@@ -1,0 +1,1 @@
+export { TranslatedMatPaginator } from './matPaginatorIntl';

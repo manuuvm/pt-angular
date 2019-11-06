@@ -1,0 +1,46 @@
+{
+  "TOOLBAR": {
+    "ADD_NEW_USER_BUTTON": "Añadir usuario"
+  },
+  "USERS": {
+    "TITLE": "Usuarios",
+    "FILTER_INPUT_PLACEHOLDER": "Filtro",
+    "CLEAR_FILTER_BUTTON": "Limpiar filtro",
+    "USER_REMOVED_SUCCESSFULLY": "Usuario eliminado correctamente",
+    "TABLE_HEADER": {
+      "NAME": "Nombre",
+      "BIRTHDATE": "Fecha de nacimiento",
+      "EDIT": "Editar",
+      "REMOVE": "Remover"
+    },
+    "TABLE_FOOTER": {
+      "ITEMS_PER_PAGE": "Items por pagina",
+      "NEXT_PAGE": "Siguiente pagina",
+      "PREVIOUS_PAGE": "Anterior pagina",
+      "RANGE": "{{startIndex}} - {{endIndex}} de {{length}}",
+      "FIRST_PAGE": "Primera pagina",
+      "LAST_PAGE": "Última pagina"
+    }
+  },
+  "NEW_USER_DIALOG": {
+    "TITLE": "Nuevo usuario",
+    "NAME_PLACEHOLDER": "Nombre",
+    "NAME_ERROR_REQUIRED": "Nombre requerido",
+    "BIRTHDATE_PLACEHOLDER": "Fecha de nacimiento",
+    "BIRTHDATE_ERROR_REQUIRED": "Fecha de nacimiento requerida",
+    "CANCEL_BUTTON": "Cancelar",
+    "SAVE_BUTTON": "Guardar",
+    "USER_CREATED_SUCCESSFULLY": "Usuario creado correctamente"
+  },
+  "USER_EDITION": {
+    "TITLE": "Edición de usuario",
+    "NAME_PLACEHOLDER": "Nombre",
+    "NAME_ERROR_REQUIRED": "Nombre requerido",
+    "BIRTHDATE_PLACEHOLDER": "Fecha de nacimiento",
+    "BIRTHDATE_ERROR_REQUIRED": "Fecha de nacimiento requerida",
+    "ID_ERROR_REQUIRED": "Id requerido",
+    "BACK_BUTTON": "Volver",
+    "SAVE_BUTTON": "Guardar",
+    "USER_MODIFIED_SUCCESSFULLY": "Usuario modificado correctamente"
+  }
+}
